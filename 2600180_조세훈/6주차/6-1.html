@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>6주차</title>
+  </head>
+  <body>
+    <form>
+      <input type="text" name="이름" />
+      <button type="submit">보내기</button>
+      <input type="password" />
+      <input type="file" />
+      <input type="color" />
+    </form>
+
+    <form>
+      <input type="text" name="이름" />
+      <button type="submit">보내기</button>
+      <button type="reset">지우기</button>
+      <button type="button">아무 일 없음</button>
+    </form>
+    <input type="text" />
+    <input type="email" />
+    <input type="number" />
+    <input type="date" />
+
+    <form>
+      <label for="이름칸">이름</label>
+      <input type="text" id="이름칸" name="이름" placeholder="예: 조세훈" />
+      <button type="button">보내기</button>
+    </form>
+
+    <label for="메일칸">전자우편</label>
+    <input
+      type="email"
+      id="메일칸"
+      name="메일"
+      placeholder="twotwoset223@gmail.com"
+    />
+    <label for="인원칸">참가 인원</label>
+
+    <input type="number" id="인원칸" name="인원" min="1" max="6" value="1" />
+    <label for="소개칸">자기소개</label>
+    <textarea id="소개칸" name="소개" rows="4" cols="30"></textarea>
+    <label for="학번칸">학번</label>
+    <input type="text" id="학번칸" name="학번" value="2600180" readonly />
+    <p>관심 분야 (여러 개 선택 가능)</p>
+    <label for="ck1"
+      ><input type="checkbox" id="ck1" name="분야" value="기획" /> 기획</label
+    >
+    <label for="ck2"
+      ><input type="checkbox" id="ck2" name="분야" value="디자인" />
+      디자인</label
+    >
+    <label for="ck3"
+      ><input type="checkbox" id="ck3" name="분야" value="개발" checked />
+      개발</label
+    >
+    <p>학년</p>
+    <label for="r1"
+      ><input type="radio" id="r1" name="학년" value="1" /> 1학년</label
+    >
+    <label for="r2"
+      ><input type="radio" id="r2" name="학년" value="2" /> 2학년</label
+    >
+    <label for="r3"
+      ><input type="radio" id="r3" name="학년" value="3" /> 3학년</label
+    >
+    <label for="학과칸">학과</label>
+    <select id="학과칸" name="학과">
+      <option value="">-- 선택하세요 --</option>
+      <option value="컴퓨터정보공학과">컴퓨터정보공학과</option>
+      <option value="소프트웨어학과">소프트웨어학과</option>
+    </select>
+    <p>이름</p>
+    <input type="text" name="이름" />
+    <label for="이름칸">이름</label>
+    <input type="text" id="이름칸" name="이름" />
+    <label>이름 <input type="text" name="이름" /></label>
+    <label for="학번칸">학번 (숫자 9자리)</label>
+    <input type="text" id="학번칸" name="학번" maxlength="9" />
+  </body>
+</html>

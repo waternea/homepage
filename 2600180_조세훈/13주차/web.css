@@ -1,0 +1,58 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 1rem;
+  font-family: system-ui, sans-serif;
+  color: #10223a;
+  background: #eef4fb;
+}
+
+.viewport-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+button {
+  padding: 0.65rem 0.9rem;
+  border: 1px solid #075985;
+  border-radius: 0.55rem;
+  background: white;
+  color: #d89be9;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button[aria-pressed="true"] {
+  background: #d89be9;
+  color: white;
+}
+
+.viewport-status {
+  margin: 0.5rem 0;
+  font-weight: 700;
+}
+
+.device-stage {
+  overflow-x: auto;
+  padding: 1rem;
+  border: 1px solid #d89be9;
+  border-radius: 0.75rem;
+  background: #cbd5e1;
+}
+
+iframe {
+  box-sizing: content-box;
+  display: block;
+  width: 360px;
+  height: 28rem;
+  margin-inline: auto;
+  border: 3px solid #d89be9;
+  border-radius: 0.65rem;
+  background: white;
+  transition: width 0.25s ease;
+}

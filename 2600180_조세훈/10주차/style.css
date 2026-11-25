@@ -1,0 +1,29 @@
+p {
+  font-family: "Redaction 50", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.redaction-50-bold {
+  font-family: "Redaction 50", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.redaction-50-regular-italic {
+  font-family: "Redaction 50", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+button {
+  background-color: #48fde5;
+  color: #f52121;
+  font-size: 12px;
+}
+.넓은안쪽 {
+  padding: 18px 30px;
+}
+.넓은바깥 {
+  padding: 6px 10px;
+  margin: 18px 30px;
+}

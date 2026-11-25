@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>반응형 해상도 실습기</title>
+    <link rel="stylesheet" href="web.css" />
+  </head>
+  <body>
+    <h1>화면 해상도별 프로젝트 목록</h1>
+    <div class="viewport-buttons" aria-label="미리보기 화면 폭 선택">
+      <button
+        type="button"
+        data-width="360"
+        data-columns="1"
+        aria-pressed="true"
+      >
+        휴대전화 360px
+      </button>
+      <button
+        type="button"
+        data-width="768"
+        data-columns="2"
+        aria-pressed="false"
+      >
+        태블릿 768px
+      </button>
+      <button
+        type="button"
+        data-width="1024"
+        data-columns="3"
+        aria-pressed="false"
+      >
+        노트북 1024px
+      </button>
+      <button
+        type="button"
+        data-width="1440"
+        data-columns="4"
+        aria-pressed="false"
+      >
+        데스크톱 1440px
+      </button>
+    </div>
+    <p class="viewport-status" aria-live="polite">현재 360px · 예상 1열</p>
+    <div class="device-stage">
+      <iframe title="반응형 프로젝트 미리보기"></iframe>
+    </div>
+    <script>
+      const preview = document.querySelector("iframe");
+      const status = document.querySelector(".viewport-status");
+
+      preview.srcdoc = [
+        "<!doctype html>",
+        '<html lang="ko">',
+        "<head>",
+        '<meta name="viewport" content="width=device-width,initial-scale=1">',
+        "<style>",
+        "*{box-sizing:border-box}",
+        "body{margin:0;padding:16px;font-family:system-ui,sans-serif;background:#f8fafc;color:#172033}",
+        ".grid{display:grid;grid-template-columns:1fr;gap:12px}",
+        ".card{padding:20px;border-radius:12px;background:#dbeafe;color:#1e3a8a;font-weight:700}",
+        "@media(min-width:600px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}",
+        "@media(min-width:900px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}",
+        "@media(min-width:1200px){.grid{grid-template-columns:repeat(4,minmax(0,1fr))}}",
+        "<\/style>",
+        "<\/head>",
+        "<body>",
+        "<h2>감기 걸려서 어지럽다<\/h2>",
+        '<div class="grid">',
+        '<div class="card">유자차 맛있더라<\/div>',
+        '<div class="card">머리 아파서 평소처럼 폰 보면 진짜 죽을듯<\/div>',
+        '<div class="card">오늘은 일찍 좀 자야지<\/div>',
+        '<div class="card">아 맞다 오늘 약속 있는데<\/div>',
+        "<\/div>",
+        "<\/body>",
+        "<\/html>",
+      ].join("");
+
+      document.querySelectorAll("[data-width]").forEach((button) => {
+        button.addEventListener("click", () => {
+          document
+            .querySelectorAll("[data-width]")
+            .forEach((item) => item.setAttribute("aria-pressed", "false"));
+          button.setAttribute("aria-pressed", "true");
+          preview.style.width = `${button.dataset.width}px`;
+          status.textContent = `현재 ${button.dataset.width}px · 예상 ${button.dataset.columns}열`;
+        });
+      });
+    </script>
+  </body>
+</html>

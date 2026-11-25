@@ -1,0 +1,78 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+body {
+  margin: 0;
+  color: #172033;
+  font-family: system-ui, sans-serif;
+}
+
+.페이지 {
+  width: 90%;
+  max-width: 960px;
+  margin: 32px auto;
+  padding: 24px;
+  border: 2px solid #245ba8;
+}
+
+.소개 {
+  margin-bottom: 24px;
+  text-align: center;
+}
+.배지 {
+  display: inline-block;
+  padding: 6px 10px;
+  border: 1px solid #245ba8;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+.소개 h1 {
+  font-size: 2rem;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+
+.칸목록 {
+  display: flex;
+  flex-wrap: wrap;
+}
+.칸 {
+  width: 33%;
+  flex-shrink: 0;
+  padding: 20px;
+  border: 2px solid #9cadbf;
+}
+.칸 h2 {
+  font-size: 1.25rem;
+}
+.본문 {
+  line-height: 1.7;
+}
+.강조 {
+  font-weight: 700;
+  text-decoration: underline;
+}
+.취소 {
+  text-decoration: line-through;
+}
+.긴주소 {
+  overflow-wrap: break-word;
+}
+
+.메뉴 {
+  margin-top: 24px;
+  text-align: center;
+}
+.메뉴 a {
+  display: inline-block;
+  margin: 4px;
+  padding: 10px 16px;
+  border: 1px solid #245ba8;
+  color: #245ba8;
+  font-weight: 700;
+  text-decoration: none;
+}

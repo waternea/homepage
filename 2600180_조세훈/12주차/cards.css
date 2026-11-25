@@ -1,0 +1,84 @@
+:root {
+  --text-default: #172033;
+  --background-page: #eef3f8;
+  --accent-primary: #24a850;
+  --text-heading: #176831;
+  --surface-card: #fff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 32px 20px;
+  color: var(--text-default);
+  background: var(--background-page);
+  font-family: system-ui, sans-serif;
+}
+
+.페이지 {
+  width: min(100%, 980px);
+  margin: auto;
+}
+.머리말 {
+  margin-bottom: 24px;
+  text-align: center;
+}
+.머리말 h1 {
+  margin: 8px 0;
+  color: var(--text-heading);
+  text-shadow: 0 2px 4px rgba(15, 23, 42, 0.25);
+}
+.배지 {
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: var(--accent-primary);
+}
+
+.카드목록 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.카드 {
+  flex: 1 1 260px;
+  min-height: 250px;
+  padding: 28px;
+  background: var(--surface-card);
+  border: 1px solid #cbd5e1;
+  border-radius: 18px;
+  box-shadow: 0 8px 24px -4px rgba(15, 23, 42, 0.22);
+}
+.카드 h2 {
+  margin: 18px 0 8px;
+  color: var(--text-heading);
+}
+.카드 p {
+  line-height: 1.7;
+}
+
+.원형배지 {
+  display: grid;
+  place-items: center;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: var(--accent-primary);
+  color: var(--surface-card);
+  font-size: 1.6rem;
+  font-weight: 800;
+  box-shadow: 0 5px 12px rgba(36, 91, 168, 0.35);
+}
+
+.비대칭카드 {
+  border-radius: 28px 6px 28px 6px;
+  box-shadow: 0 14px 32px rgba(15, 23, 42, 0.2);
+}
+.안쪽카드 {
+  border-radius: 6px 28px 6px 28px;
+  box-shadow:
+    inset 0 0 0 5px rgba(36, 91, 168, 0.16),
+    0 4px 12px rgba(15, 23, 42, 0.14);
+}

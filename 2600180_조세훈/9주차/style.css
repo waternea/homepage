@@ -1,0 +1,20 @@
+h1 {
+  color: aquamarine;
+}
+h2 {
+  color: aqua;
+}
+ul {
+  color: blueviolet;
+}
+p {
+  color: antiquewhite;
+}
+.highlight {
+  color: hotpink;
+  padding: 4px 8px;
+  background-color: rgba(212, 74, 162, 0.2);
+}
+#top {
+  border-bottom: 2px solid #245ba8;
+}

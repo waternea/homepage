@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>그라디언트와 필터 통합 실습</title>
+    <link rel="stylesheet" href="background-lab.css" />
+  </head>
+  <body>
+    <main class="페이지">
+      <header>
+        <p class="윗글">CSS BACKGROUND LAB</p>
+        <h1>파일 없이 CSS로 배경 만들기</h1>
+      </header>
+
+      <section class="배경목록" aria-label="CSS 배경 비교">
+        <article class="배경카드 직선">
+          <h2>직선 그라디언트</h2>
+          <p>135도 방향으로 초록과 연두가 이어집니다.</p>
+        </article>
+        <article class="배경카드 정지점">
+          <h2>같은 색 정지점</h2>
+          <p>52% 지점에서 색이 섞이지 않고 바로 바뀝니다.</p>
+        </article>
+        <article class="배경카드 원형">
+          <h2>원형 그라디언트</h2>
+          <p>왼쪽 위 30% 20% 지점에서 빛이 퍼집니다.</p>
+        </article>
+        <article class="배경카드 무늬">
+          <h2>크기·위치·반복</h2>
+          <p>작은 원형 배경 두 장이 서로 다른 위치에서 반복됩니다.</p>
+        </article>
+      </section>
+
+      <section class="필터영역" aria-labelledby="필터제목">
+        <h2 id="필터제목">같은 견본에 filter 적용하기</h2>
+        <div class="필터목록">
+          <figure>
+            <div class="색견본 원본"></div>
+            <figcaption>원본</figcaption>
+          </figure>
+          <figure>
+            <div class="색견본 흑백"></div>
+            <figcaption>grayscale</figcaption>
+          </figure>
+          <figure>
+            <div class="색견본 선명"></div>
+            <figcaption>saturate + brightness</figcaption>
+          </figure>
+          <figure>
+            <div class="색견본 흐림"></div>
+            <figcaption>blur</figcaption>
+          </figure>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
